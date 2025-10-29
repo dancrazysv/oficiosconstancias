@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{titulo_constancia}}</title>
+    <style>
+        body { 
+            font-family: sans-serif;
+            margin: 40px; 
+            padding: 0;
+            text-align: justify;
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 25px; 
+            line-height: 1.1;
+        }
+        .logo-container {
+            width: 100%; /* Contenedor para el logo */
+            text-align: center;
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto 15px auto;
+            max-width: 100px; /* Tamaño del logo */
+        }
+        .titulo {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .content { 
+            line-height: 1.6; 
+            margin-bottom: 20px;
+        }
+        .indent {
+            text-indent: 0.5in; /* Sangría para el inicio del párrafo */
+        }
+        .signature { 
+            text-align: center; 
+            margin-top: 80px; 
+        }
+        .note {
+            font-size: 0.9em;
+            margin-top: 50px;
+            text-align: left;
+        }
+        .signature-block {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .signature-block p {
+            margin: 0;
+            line-height: 1.2;
+        }
+        .leyenda {
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        {{escudo_img}}
+        <p class="titulo"><strong>{{titulo_constancia}}</strong></p>
+    </div>
+    
+    <p style="text-align: right; margin-bottom: 30px;">A QUIEN CORRESPONDA:</p>
+
+    <p class="content indent">
+        El Infrascrito Registrador del Estado Familiar del Distrito San Salvador Sede, Ad Honorem, **HACE CONSTAR QUE**: a esta oficina se presentó <strong>{{nombre_solicitante}}</strong>, quien se identifica con <strong>{{tipo_documento_nombre}}</strong> número <strong>{{numero_documento}}</strong> {{parrafo_introductorio_dinamico}}
+    </p>
+
+    {{parrafo_principal_texto}}
+
+    <p class="content indent">
+        Se extiende la presente en Distrito San Salvador Sede, San Salvador Centro, San Salvador, a los **{{fecha_emision_texto}}**. Se advierte que este Registro del Estado Familiar no es responsable por la inexactitud o falsedad de los datos proporcionados en la presente. CUALQUIER ALTERACIÓN ANULA EL PRESENTE DOCUMENTO.
+    </p>
+    
+    {{leyenda_divorcio}}
+
+    <div class="signature">
+        {{imagen_firma}}
+    </div>
+    
+    <p class="note">Nota: La presente constancia es válida por 120 días desde su fecha de emisión.</p>
+</body>
+</html>

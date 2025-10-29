@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Oficio de Certificación</title>
+    <style>
+        body { 
+            font-family: sans-serif;
+            /* Se usa el marcador {{background_style}} para inyectar la imagen */
+            {{background_style}} 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { text-align: center; margin-bottom: 20px; }
+        .reference { text-align: right; }
+        .content { margin-top: 40px; }
+        .justified { text-align: justify; }
+        .signature { text-align: center; margin-top: 80px; }
+        
+        /* Estilo para eliminar el interlineado del bloque de dirección */
+        .no-spacing p {
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        /* Posicionamiento del QR */
+        .qr-container {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        {{logo_img}} 
+    </div>
+    
+    <p class="reference">Referencia: {{referencia}}</p>
+    <p class="reference">San Salvador Centro, {{fecha}}</p>
+    
+    <div class="content">
+        <div class="no-spacing">
+            <p>{{nombre_licenciado}}</p>
+            <p>{{cargo_licenciado}}</p>
+            <p>Distrito de {{distrito_destino}}, Municipio de {{municipio_destino}},</p>
+            <p>Departamento de {{departamento_destino}}</p>
+        </div>
+        <p>Presente. -</p>
+        
+        <p class="justified">Sirva la oportunidad para saludarle y desearle éxitos en sus actividades cotidianas.</p>
+        
+        <p class="justified">Por este medio, se remite Certificación de Partida de Defunción correspondiente a <strong>{{nombre_difunto}}</strong>, asentada en el número {{numero_partida}}, folio {{folio}}, libro {{libro}}, inscrita en el Distrito de {{distrito_inscripcion}}, Municipio de San Salvador Centro, Departamento de San Salvador, en el año {{anio_inscripcion}}, en el cual hace constar que la persona era originaria de Distrito de {{distrito_origen}}, Municipio de {{municipio_origen}}, Departamento de {{departamento_origen}}, lo anterior, es con el propósito de realizar la anotación marginal en la Partida de Nacimiento correspondiente a la referida persona.</p>
+        
+        <p class="justified">Esta actualización, es en virtud de los artículos 20, 38, 80 y 125 de la Ley del Registro del Estado Familiar.</p>
+        
+        <p class="justified">Para cualquier duda o consulta puede realizar por medio del correo electrónico ref.sansalvador@gmail.com y al teléfono 2511-6000 ext. 1358.</p>
+        
+        <p>Esperando su pronta respuesta a mi solicitud, cordialmente me suscribo.</p>
+    </div>
+    
+    <div class="signature">
+        {{imagen_firma}}
+    </div>
+
+    <div class="qr-container">
+        {{qr_code}}
+    </div>
+</body>
+</html>
